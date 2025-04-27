@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Untuk Raa</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Password Page -->
+  <div class="container password-page" id="passwordPage">
+    <h1>🔒 Pesan Rahasia</h1>
+    <p>Hanya untuk seseorang yang sangat spesial...</p>
+    <input type="password" id="passwordInput" placeholder="Masukkan password...">
+    <button onclick="checkPassword()">Buka</button>
+    <p id="errorMsg" class="error hidden">Password salah, coba lagi ya! 😜</p>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content hidden" id="mainContent">
+
+    <!-- Motivasi Page -->
+    <section class="section" id="motivasiPage">
+      <h1>🌟 Hayiee cah ayuu 🌟</h1>
+      <p id="typingText"></p>
+      <h1> Dengerin ini ya cantikk!</h1>
+      <audio controls>
+        <source src="audio/motivasi.mp3" type="audio/mpeg">
+      </audio>
+      <br>
+      <button onclick="showWheelPage()">Putar Wheel 🎡</button>
+    </section>
+
+    <!-- Wheel Page -->
+    <section class="section hidden" id="wheelPage">
+      <h1>🎡 Spin The Wheel</h1>
+      <canvas id="wheel" width="300" height="300"></canvas>
+      <br>
+      <button onclick="spinWheel()">Putar!</button>
+      <p id="wheelResult"></p>
+      <button id="hugButton" class="hidden" onclick="showAlbum()">Peluk Sekarang 🫂</button>
+    </section>
+
+    <!-- Album Page -->
+    <section class="section hidden" id="albumPage">
+      <h1>📷 Ras & Raa</h1>
+      <div class="album-grid">
+        <img src="images/foto1.png" alt="Foto 1" onclick="openPreview(this.src)">
+        <img src="images/foto2.png" alt="Foto 2" onclick="openPreview(this.src)">
+        <img src="images/foto3.png" alt="Foto 3" onclick="openPreview(this.src)">
+        <img src="images/foto4.png" alt="Foto 4" onclick="openPreview(this.src)">
+      </div>
+    </section>
+
+    <!-- Photo Preview -->
+    <div id="photoPreview" class="hidden">
+      <img id="previewImage" src="" alt="Preview Foto">
+      <button onclick="closePreview()">Tutup</button>
+    </div>
+
+  </div>
+
+  <script src="js/script.js "></script>
+</body>
+</html>
